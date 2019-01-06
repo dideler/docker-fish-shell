@@ -10,3 +10,5 @@ SHELL ["fish", "--command"]
 RUN chsh -s /usr/bin/fish
 
 ENV SHELL /usr/bin/fish
+
+ENTRYPOINT [ "fish" ]
