@@ -1,3 +1,5 @@
 # Docker image repository for fish
 
-Requires Docker 1.12 and up, due to the `SHELL` Dockerfile instruction.
+Ubuntu with the fish shell installed.
+
+More information and usage at https://cloud.docker.com/repository/docker/dideler/fish-shell
