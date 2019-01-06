@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 
 RUN apt-get update && \
     apt-get install --quiet --yes software-properties-common && \
