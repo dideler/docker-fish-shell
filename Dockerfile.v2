@@ -1,0 +1,14 @@
+FROM ubuntu:bionic
+
+RUN apt-get update && \
+    apt-get install --quiet --yes software-properties-common && \
+    add-apt-repository --yes ppa:fish-shell/release-2 && \
+    apt-get install --quiet --yes fish=2.7.1-3
+
+SHELL ["fish", "--command"]
+
+RUN chsh -s /usr/bin/fish
+
+ENV SHELL /usr/bin/fish
+
+ENTRYPOINT [ "fish" ]
