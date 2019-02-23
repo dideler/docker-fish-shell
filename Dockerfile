@@ -1,9 +1,9 @@
 FROM ubuntu:bionic
 
-RUN apt-get update && \
+RUN apt-get update --quiet && \
     apt-get install --quiet --yes software-properties-common && \
     add-apt-repository --yes ppa:fish-shell/release-3 && \
-    apt-get install --quiet --yes fish=3.0.0-1~bionic
+    apt-get install --quiet --yes fish=3.0.2-1~bionic
 
 SHELL ["fish", "--command"]
 
