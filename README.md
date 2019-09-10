@@ -1,4 +1,4 @@
-# fish :fish: + docker :whale:
+# fish 🐟 + docker 🐳
 
 [![Docker Build](https://img.shields.io/docker/automated/dideler/fish-shell.svg)](https://hub.docker.com/r/dideler/fish-shell)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dideler/fish-shell.svg)](https://hub.docker.com/r/dideler/fish-shell)
