@@ -38,3 +38,31 @@ root@aa26d2209674 /# for i in (seq 1 3)
 2
 3
 ```
+
+Using the image in a CircleCI build for testing [a fish packge](https://github.com/dideler/fish-cd-git/blob/master/.circleci/config.yml)
+```yaml
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: dideler/fish-shell:3.0.2
+    shell: fish
+    steps:
+      - checkout
+      - run:
+          name: Install fisher
+          command: |
+            apt-get update --quiet
+            apt-get install --yes --quiet curl
+            curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+            fisher --version
+      - run:
+          name: Install fish-cd-git
+          command: |
+            fisher add < fishfile
+            fisher add (pwd)
+      - run:
+          name: Run tests
+          command: fishtape test/*.fish
+```
