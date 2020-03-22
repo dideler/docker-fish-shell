@@ -15,12 +15,20 @@ Available on Docker Hub at https://hub.docker.com/r/dideler/fish-shell
 **Not intended for** developing on the fish codebase.  
 To build the shell from source with the help of Docker, see [fish-shell's Dockerfile](https://github.com/fish-shell/fish-shell/blob/master/Dockerfile) instead.
 
+## Versions
+
+See [all image tags on DockerHub][image-tags] for available fish versions.
+
+Images are based on the latest Ubuntu LTS available at the time of building.
+
+[image-tags]: https://hub.docker.com/r/dideler/fish-shell/tags?page=1&ordering=name
+
 ## Examples
 
 Using the latest version
 ```shell
 $ docker container run --rm dideler/fish-shell --version
-fish, version 3.0.2
+fish, version 3.1.0
 ```
 
 Using a specific version
@@ -46,7 +54,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: dideler/fish-shell:3.0.2
+      - image: dideler/fish-shell:3.1.0
     shell: fish
     steps:
       - checkout
