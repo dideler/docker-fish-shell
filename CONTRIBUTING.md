@@ -13,7 +13,11 @@ In terms of maintenance, periodically check whether there is a new
    ```
    docker image build --tag fish-shell --tag dideler/fish-shell:3.1.0 .
    ```
-4. Push the image to the DockerHub repository  
+4. Verify the version is correct  
+   ```
+   docker container run --rm fish-shell --version
+   ```
+5. Push the image to the DockerHub repository  
    ```
    docker image push dideler/fish-shell:3.1.0
    ```
