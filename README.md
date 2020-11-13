@@ -59,11 +59,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install fisher
+          name: Install Fisher
           command: |
             apt-get update --quiet
             apt-get install --yes --quiet curl
-            curl -sLo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+            curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
             fisher --version
       - run:
           name: Install fish-cd-git
