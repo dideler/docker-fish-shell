@@ -68,8 +68,8 @@ jobs:
       - run:
           name: Install fish-cd-git
           command: |
-            fisher add < fishfile
-            fisher add (pwd)
+            fisher install <fish_plugins
+            fisher install .
       - run:
           name: Run tests
           command: fishtape test/*.fish
