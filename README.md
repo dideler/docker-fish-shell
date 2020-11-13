@@ -10,7 +10,7 @@ Available on Docker Hub at https://hub.docker.com/r/dideler/fish-shell
 ## Use case
 
 **Useful when** wanting to play around with fish in a pristine and ephemeral environment.  
-**Useful when** reproducibility is desired (e.g. runnings tests in a CI pipeline for a fish package).
+**Useful when** reproducibility is desired (e.g. controlled environment for running a fish package CI pipeline).
 
 **Not intended for** developing on the fish codebase.  
 To build the shell from source with the help of Docker, see [fish-shell's Dockerfile](https://github.com/fish-shell/fish-shell/blob/master/Dockerfile) instead.
