@@ -1,4 +1,4 @@
-FROM ubuntu:bionic
+FROM ubuntu:focal
 
 RUN apt-get update --quiet && \
     apt-get install --quiet --yes software-properties-common openssh-client git && \
