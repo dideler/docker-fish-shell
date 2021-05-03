@@ -11,14 +11,14 @@ In terms of maintenance, periodically check whether there is a new
 2. Update the version in the Dockerfile (e.g. 3.1.0-1~bionic)
 3. Build a new tagged image  
    ```
-   docker image build --tag fish-shell --tag dideler/fish-shell:3.1.0 .
+   docker image build --tag fish-shell --tag dideler/fish-shell:3.1.0 --tag ghcr.io/dideler/fish-shell:3.1.0 ./.
    ```
 4. Verify the version is correct  
    ```
    docker container run --rm fish-shell --version
    ```
-5. Push the image to the DockerHub repository  
+5. Push the image to DockerHub and GitHub Container Registry  
    ```
    docker image push dideler/fish-shell:3.1.0
+   docker image push ghcr.io/dideler/fish-shell:3.1.0
    ```
-
