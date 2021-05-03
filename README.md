@@ -5,7 +5,8 @@
 
 Ubuntu LTS container with fish installed as the default shell.
 
-Available on Docker Hub at https://hub.docker.com/r/dideler/fish-shell
+- Available on Docker Hub at https://hub.docker.com/r/dideler/fish-shell
+- Available on GitHub at https://github.com/users/dideler/packages/container/package/fish-shell
 
 ## Use case
 
@@ -17,21 +18,22 @@ To build the shell from source with the help of Docker, see [fish-shell's Docker
 
 ## Versions
 
-See [all image tags on DockerHub][image-tags] for available fish versions.
+See image tags [on DockerHub][dh-image-tags] or [on GitHub][gh-image-tags] for available fish versions.
 
 Images are based on the latest Ubuntu LTS available at the time of building.
 
-[image-tags]: https://hub.docker.com/r/dideler/fish-shell/tags?page=1&ordering=name
+[dh-image-tags]: https://hub.docker.com/r/dideler/fish-shell/tags?page=1&ordering=name
+[gh-image-tags]: https://github.com/users/dideler/packages/container/fish-shell/versions
 
 ## Examples
 
-Using the latest version
+Pulling the latest image
 ```shell
-$ docker container run --rm dideler/fish-shell --version
-fish, version 3.1.0
+docker pull dideler/fish-shell # from DockerHub
+docker pull ghcr.io/dideler/fish-shell # from GitHub
 ```
 
-Using a specific version
+Running commands on a specific version
 ```shell
 $ docker container run --rm dideler/fish-shell:2.7.1 --version
 fish, version 2.7.1
