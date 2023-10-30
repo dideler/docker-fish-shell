@@ -56,7 +56,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: dideler/fish-shell:3.1.0
+      - image: dideler/fish-shell:3.6.1
     shell: fish
     steps:
       - checkout
