@@ -1,11 +1,11 @@
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --quiet && \
     apt-get install --quiet --yes software-properties-common openssh-client git && \
     add-apt-repository --yes ppa:fish-shell/release-3 && \
-    apt-get install --quiet --yes fish=3.2.2-1~focal
+    apt-get install --quiet --yes fish=3.6.1-1~jammy
 
 SHELL ["fish", "--command"]
 
