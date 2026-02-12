@@ -1,5 +1,19 @@
 ### Creating a new tagged image for a fish version
 
+Images are automatically built and pushed by [GitHub Actions](.github/workflows/build-push.yml)
+when Dockerfiles are changed on `main`, and on a monthly schedule.
+
+#### Automated workflow
+
+1. Update the fish version in the relevant Dockerfile (e.g. `Dockerfile.v4`)
+2. Check the [fish-shell PPA][fish-ppa] for the correct version string for your Ubuntu base
+   (e.g. `4.4.0-4~noble`)
+3. Push or merge to `main` — the CI workflow will build, verify, and push to both
+   [Docker Hub](https://hub.docker.com/r/dideler/fish-shell) and
+   [GitHub Container Registry](https://github.com/users/dideler/packages/container/package/fish-shell)
+
+#### Manual build (if needed)
+
 Building the image requires Docker 1.12 and up, due to the `SHELL` Dockerfile instruction.
 
 In terms of maintenance, periodically check whether there is a new
