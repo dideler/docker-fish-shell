@@ -2,8 +2,6 @@ FROM ubuntu:jammy
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-COPY ./badproxy /etc/apt/apt.conf.d/99fixbadproxy
-
 RUN apt-get update --quiet && \
     apt-get install --quiet --yes software-properties-common openssh-client git && \
     add-apt-repository --yes ppa:fish-shell/release-3 && \
