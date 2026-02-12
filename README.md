@@ -1,7 +1,9 @@
 # fish 🐟 + docker 🐳
 
-[![Docker Build](https://img.shields.io/docker/automated/dideler/fish-shell.svg)](https://hub.docker.com/r/dideler/fish-shell)
+[![Docker Image Version](https://img.shields.io/docker/v/dideler/fish-shell?sort=semver)](https://hub.docker.com/r/dideler/fish-shell)
+[![Docker Image Size](https://img.shields.io/docker/image-size/dideler/fish-shell?sort=semver)](https://hub.docker.com/r/dideler/fish-shell)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dideler/fish-shell.svg)](https://hub.docker.com/r/dideler/fish-shell)
+[![GitHub Actions Build](https://github.com/dideler/docker-fish-shell/actions/workflows/build-push.yml/badge.svg)](https://github.com/dideler/docker-fish-shell/actions/workflows/build-push.yml)
 
 Docker images for an Ubuntu LTS container with [fish](https://fishshell.com) installed as the default shell.
 
