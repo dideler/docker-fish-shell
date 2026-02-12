@@ -6,7 +6,7 @@
 Docker images for an Ubuntu LTS container with [fish](https://fishshell.com) installed as the default shell.
 
 - [Available on Docker Hub](https://hub.docker.com/r/dideler/fish-shell)
-- [Available on GitHub](https://github.com/users/dideler/packages/container/package/fish-shell)
+- [Available on GitHub Container Registry](https://github.com/users/dideler/packages/container/package/fish-shell)
 
 ## Use case
 
@@ -18,9 +18,15 @@ To build the shell from source with the help of Docker, see [fish-shell's Docker
 
 ## Versions
 
-See image tags [on DockerHub][dh-image-tags] or [on GitHub][gh-image-tags] for available fish versions.
+See image tags on [DockerHub][dh-image-tags] or on [GitHub][gh-image-tags] for available fish versions.
 
 Images are based on the latest Ubuntu LTS available at the time of building.
+
+| Dockerfile | Fish Series | Ubuntu Base |
+|-----------|------------|-------------|
+| `Dockerfile.v4` | 4.x | noble (24.04) |
+| `Dockerfile.v3` | 3.x | jammy (22.04) |
+| `Dockerfile.v2` | 2.x | bionic (18.04) |
 
 [dh-image-tags]: https://hub.docker.com/r/dideler/fish-shell/tags?page=1&ordering=name
 [gh-image-tags]: https://github.com/users/dideler/packages/container/fish-shell/versions
@@ -33,10 +39,10 @@ docker pull dideler/fish-shell # from DockerHub
 docker pull ghcr.io/dideler/fish-shell # from GitHub
 ```
 
-Running commands on a specific version
+Running commands on a specific version (as one-off or interactive session)
 ```shell
-$ docker container run --rm dideler/fish-shell:2.7.1 --version
-fish, version 2.7.1
+$ docker container run --rm dideler/fish-shell:3.7.1 --version
+fish, version 3.7.1
 ```
 
 ```shell
@@ -49,14 +55,14 @@ root@aa26d2209674 /# for i in (seq 1 3)
 3
 ```
 
-Using the image in a CircleCI build for testing [a fish packge](https://github.com/dideler/fish-cd-git/blob/master/.circleci/config.yml)
+Using the image in a CircleCI build for testing [a fish package](https://github.com/dideler/fish-cd-git/blob/master/.circleci/config.yml)
 ```yaml
 version: 2
 
 jobs:
   build:
     docker:
-      - image: dideler/fish-shell:3.6.1
+      - image: dideler/fish-shell:3.7.1
     shell: fish
     steps:
       - checkout
