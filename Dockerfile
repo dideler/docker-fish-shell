@@ -3,9 +3,11 @@ FROM ubuntu:jammy
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update --quiet && \
-    apt-get install --quiet --yes software-properties-common openssh-client git && \
+    apt-get install --quiet --yes --no-install-recommends software-properties-common gnupg openssh-client git ca-certificates && \
     add-apt-repository --yes ppa:fish-shell/release-3 && \
-    apt-get install --quiet --yes fish=3.7.1-1~jammy
+    apt-get install --quiet --yes --no-install-recommends fish=3.7.1-1~jammy && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 SHELL ["fish", "--command"]
 
