@@ -3,10 +3,10 @@
 [![Docker Build](https://img.shields.io/docker/automated/dideler/fish-shell.svg)](https://hub.docker.com/r/dideler/fish-shell)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dideler/fish-shell.svg)](https://hub.docker.com/r/dideler/fish-shell)
 
-Ubuntu LTS container with fish installed as the default shell.
+Docker images for an Ubuntu LTS container with [fish](https://fishshell.com) installed as the default shell.
 
-- Available on Docker Hub at https://hub.docker.com/r/dideler/fish-shell
-- Available on GitHub at https://github.com/users/dideler/packages/container/package/fish-shell
+- [Available on Docker Hub](https://hub.docker.com/r/dideler/fish-shell)
+- [Available on GitHub](https://github.com/users/dideler/packages/container/package/fish-shell)
 
 ## Use case
 
